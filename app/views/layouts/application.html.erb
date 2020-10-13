@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pianoonline</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class = "header">
+      <div class = "left-content">
+        <h1 class = "logo"><a href = "/" >piano*online</a></h1>
+      </div>
+      <div class = "right-content">
+       <%= link_to "曲名検索","#",class:"search right-content-item" %>
+       <%= link_to "よくあるご質問","#",class:"question right-content-item" %>
+       <%= link_to "ログイン","#",class:"log-in right-content-item" %>
+       <%= link_to "新規登録","#",class:"sign-in right-content-item" %>
+      </div>
+    </header>
+      <div class = "hover">
+        <%= link_to "piano*onlineってなに？","#",class:"what-is-piano-online hover-item" %>
+        <%= link_to "どうやって順位を決めるの？","#",class:"who hover-item" %>
+        <%= link_to "コンクールの参加にお金はかかるの？","#",class:"how-mach hover-item" %>
+        <%= link_to "退会の方法は？","#",class:"else hover-item" %>
+      </div>
+    <%= yield %>
+  </body>
+</html>
